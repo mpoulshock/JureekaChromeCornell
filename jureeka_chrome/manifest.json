@@ -1,0 +1,25 @@
+{
+    "name": "Jureeka!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Jureeka! Powered by LII / Legal Information Institute. Created by Michael Poulshock.  Adapted for Google Chrome by Imad Kariapper",
+    "content_scripts": [{
+        "matches": ["http://*/*"],
+        "js": ["constants.js", "jureeka.js"],
+        "run_at": "document_end"
+    }],
+    "background": { 
+        "scripts": ["background.js", "constants.js"]
+    },
+    "permissions": [
+        "tabs",
+        "cookies",
+        "management",
+        "http://*/*"
+    ],
+    "browser_action": {
+        "default_icon": "jureeka.png",
+        "default_popup": "popup.html"
+    },
+    "homepage_url": "http://www.law.cornell.edu"
+}
